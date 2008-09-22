@@ -1,0 +1,21 @@
+package ansascraper;
+
+import java_cup.*;
+import java_cup.runtime.*;
+import java.net.*;
+import java.io.*;
+import java.util.*;
+
+terminal String TITOLO,TESTO;
+non terminal NOTIZIA;
+
+NOTIZIA ::= TITOLO:T TESTO:TX {: 
+	try
+	{
+            RESULT=T+System.getProperty("line.separator")+TX;
+    	}
+	catch(Exception e)
+	{
+		System.out.println(e);
+	}
+:};

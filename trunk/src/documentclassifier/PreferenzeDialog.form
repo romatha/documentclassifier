@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.6" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="gruppoMetriche">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" resourceKey="Form.title"/>
+    <Property name="locationByPlatform" type="boolean" value="true"/>
+    <Property name="modal" type="boolean" value="true"/>
+    <Property name="name" type="java.lang.String" value="Form" noResource="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="0"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="bottoneOK" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="bottoneAnnulla" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="bottoneReset" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="427" max="32767" attributes="0"/>
+          </Group>
+          <Component id="tabbelPanePreferenze" alignment="1" pref="625" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="tabbelPanePreferenze" pref="397" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="bottoneOK" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bottoneAnnulla" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bottoneReset" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="bottoneOK">
+      <Properties>
+        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+          <action class="documentclassifier.PreferenzeDialog" id="OKPreferenze" methodName="OKPreferenze"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="bottoneOK" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="bottoneAnnulla">
+      <Properties>
+        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+          <action class="documentclassifier.PreferenzeDialog" id="annullaPreferenze" methodName="annullaPreferenze"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="bottoneAnnulla" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="bottoneReset">
+      <Properties>
+        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+          <action class="documentclassifier.PreferenzeDialog" id="resettaPreferenze" methodName="resettaPreferenze"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="bottoneReset" noResource="true"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JTabbedPane" name="tabbelPanePreferenze">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="tabbelPanePreferenze" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="panelTrainingSet">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="panelTrainingSet" noResource="true"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Training set">
+                <Property name="tabTitle" type="java.lang.String" resourceKey="panelTrainingSet.TabConstraints.tabTitle"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="labelDirectoryTrainingSet" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="fieldDirectoryTrainingSet" pref="385" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="bottoneSfogliaDirectoryTrainingSet" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelDirectoryTrainingSet" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bottoneSfogliaDirectoryTrainingSet" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fieldDirectoryTrainingSet" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="323" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelDirectoryTrainingSet">
+              <Properties>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="fieldDirectoryTrainingSet"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="labelDirectoryTrainingSet.text"/>
+                <Property name="name" type="java.lang.String" value="labelDirectoryTrainingSet" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="fieldDirectoryTrainingSet">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="fieldDirectoryTrainingSet.text"/>
+                <Property name="name" type="java.lang.String" value="fieldDirectoryTrainingSet" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="controlloPercorso"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="bottoneSfogliaDirectoryTrainingSet">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="bottoneSfogliaDirectoryTrainingSet.text"/>
+                <Property name="name" type="java.lang.String" value="bottoneSfogliaDirectoryTrainingSet" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sfogliaFiles"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panelPreprocessing">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="panelPreprocessing" noResource="true"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Preprocessing">
+                <Property name="tabTitle" type="java.lang.String" resourceKey="panelPreprocessing.TabConstraints.tabTitle"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="separatorScraperPreprocessing" alignment="0" pref="593" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelParser" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="comboBoxScraper" pref="528" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="labelPreprocessing" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="12" pref="12" max="12" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="12" pref="12" max="12" attributes="0"/>
+                                      <Component id="labelStopWords" min="-2" pref="110" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="fieldStopWords" pref="387" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="bottoneSfogliaStopWords" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="checkBoxStopWords" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="checkBoxStemming" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="12" pref="12" max="12" attributes="0"/>
+                                      <Component id="labelStemmerCorrente" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="comboBoxStemmers" pref="497" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelParser" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboBoxScraper" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="separatorScraperPreprocessing" min="-2" pref="10" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="labelPreprocessing" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="checkBoxStopWords" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelStopWords" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fieldStopWords" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bottoneSfogliaStopWords" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="checkBoxStemming" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelStemmerCorrente" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboBoxStemmers" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="178" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelParser">
+              <Properties>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="comboBoxScraper"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="labelParser.text"/>
+                <Property name="name" type="java.lang.String" value="labelParser" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="comboBoxScraper">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="comboBoxScraper" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSeparator" name="separatorScraperPreprocessing">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="separatorScraperPreprocessing" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelPreprocessing">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="labelPreprocessing.text"/>
+                <Property name="name" type="java.lang.String" value="labelPreprocessing" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="checkBoxStopWords">
+              <Properties>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" resourceKey="checkBoxStopWords.text"/>
+                <Property name="name" type="java.lang.String" value="checkBoxStopWords" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="checkBoxStopWordsStateChanged"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelStopWords">
+              <Properties>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="fieldStopWords"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="labelStopWords.text"/>
+                <Property name="name" type="java.lang.String" value="labelStopWords" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="fieldStopWords">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="fieldStopWords" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="controlloPercorso"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="bottoneSfogliaStopWords">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="bottoneSfogliaStopWords.text"/>
+                <Property name="name" type="java.lang.String" value="bottoneSfogliaStopWords" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sfogliaFiles"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="checkBoxStemming">
+              <Properties>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" resourceKey="checkBoxStemming.text"/>
+                <Property name="name" type="java.lang.String" value="checkBoxStemming" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="checkBoxStemmingStateChanged"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelStemmerCorrente">
+              <Properties>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="checkBoxStemming"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="labelStemmerCorrente.text"/>
+                <Property name="name" type="java.lang.String" value="labelStemmerCorrente" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="comboBoxStemmers">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="comboBoxStemmers" noResource="true"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panelClassificazione">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="panelClassificazione" noResource="true"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Classificazione">
+                <Property name="tabTitle" type="java.lang.String" resourceKey="panelClassificazione.TabConstraints.tabTitle"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="separatorMetricaKNN" alignment="0" pref="593" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelMetrica" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="bottoneBhattacharrya" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bottoneTFIDF" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelKNNTitle" min="-2" pref="37" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="labelKNNValue" min="-2" pref="35" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="sliderKNN" pref="503" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="bottoneTFIDF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelMetrica" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="bottoneBhattacharrya" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="separatorMetricaKNN" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="labelKNNTitle" alignment="3" min="-2" pref="20" max="-2" attributes="1"/>
+                              <Component id="labelKNNValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="sliderKNN" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="244" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JRadioButton" name="bottoneTFIDF">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="gruppoMetriche"/>
+                </Property>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" resourceKey="bottoneTFIDF.text"/>
+                <Property name="name" type="java.lang.String" value="bottoneTFIDF" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="bottoneBhattacharrya">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="gruppoMetriche"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="bottoneBhattacharrya.text"/>
+                <Property name="name" type="java.lang.String" value="bottoneBhattacharrya" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelMetrica">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="labelMetrica.text"/>
+                <Property name="toolTipText" type="java.lang.String" resourceKey="labelMetrica.toolTipText"/>
+                <Property name="name" type="java.lang.String" value="labelMetrica" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSlider" name="sliderKNN">
+              <Properties>
+                <Property name="maximum" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="application.getKNNMaximum()" type="code"/>
+                </Property>
+                <Property name="minimum" type="int" value="1"/>
+                <Property name="value" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="sliderKNN" name="minimum" type="property"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="sliderKNN" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelKNNTitle">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="labelKNNTitle.text"/>
+                <Property name="name" type="java.lang.String" value="labelKNNTitle" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSeparator" name="separatorMetricaKNN">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="separatorMetricaKNN" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelKNNValue">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="labelKNNValue" noResource="true"/>
+              </Properties>
+              <BindingProperties>
+                <BindingProperty name="text" source="sliderKNN" sourcePath="${value}" target="labelKNNValue" targetPath="text" updateStrategy="0" immediately="false"/>
+              </BindingProperties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panelValidazione">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="panelValidazione" noResource="true"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Validazione">
+                <Property name="tabTitle" type="java.lang.String" resourceKey="panelValidazione.TabConstraints.tabTitle"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="separatorFileLogVisualizza" alignment="1" pref="593" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="12" pref="12" max="12" attributes="0"/>
+                              <Component id="checkBoxStratificazione" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelKFoldTitle" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="labelKFoldValue" min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="sliderKFold" pref="399" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="separatorKFoldLogging" alignment="0" pref="593" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelKNNMaximumTitle" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="labelKNNMaximumValue" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="sliderKNNMaximum" pref="453" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="separatorKNNMaximumKFold" alignment="0" pref="593" max="32767" attributes="0"/>
+                          <Component id="checkBoxLogging" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="12" pref="12" max="12" attributes="0"/>
+                              <Component id="labelFileLog" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="fieldLogFile" pref="350" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="bottoneSfogliaFileLog" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="checkBoxOverwriteLogFile" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="checkBoxVisualizzaInfoDocumentoCorrente" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="checkBoxVisualizzazioneListaDocumentiCorrelati" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                      <Component id="labelKNNMaximumTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelKNNMaximumValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="sliderKNNMaximum" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="separatorKNNMaximumKFold" min="-2" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                      <Component id="labelKFoldTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelKFoldValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="sliderKFold" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="checkBoxStratificazione" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="separatorKFoldLogging" min="-2" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="checkBoxLogging" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="199" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="labelFileLog" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fieldLogFile" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bottoneSfogliaFileLog" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="checkBoxOverwriteLogFile" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="separatorFileLogVisualizza" min="-2" pref="10" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="checkBoxVisualizzaInfoDocumentoCorrente" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="checkBoxVisualizzazioneListaDocumentiCorrelati" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="58" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JSlider" name="sliderKFold">
+              <Properties>
+                <Property name="maximum" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="application.getKFoldMaximum()" type="code"/>
+                </Property>
+                <Property name="minimum" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="application.getKFoldMinimum()" type="code"/>
+                </Property>
+                <Property name="value" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="application.getKFold(false)" type="code"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="sliderKFold" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="sistemaKFold"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelKFoldTitle">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="labelKFoldTitle.text"/>
+                <Property name="name" type="java.lang.String" value="labelKFoldTitle" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSeparator" name="separatorKFoldLogging">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="separatorKFoldLogging" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="checkBoxStratificazione">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="checkBoxStratificazione.text"/>
+                <Property name="name" type="java.lang.String" value="checkBoxStratificazione" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="sistemaKFold"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="checkBoxVisualizzazioneListaDocumentiCorrelati">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="checkBoxVisualizzazioneListaDocumentiCorrelati.text"/>
+                <Property name="name" type="java.lang.String" value="checkBoxVisualizzazioneListaDocumentiCorrelati" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelKFoldValue">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="labelKFoldValue" noResource="true"/>
+              </Properties>
+              <BindingProperties>
+                <BindingProperty name="text" source="sliderKFold" sourcePath="${value}" target="labelKFoldValue" targetPath="text" updateStrategy="0" immediately="false"/>
+              </BindingProperties>
+            </Component>
+            <Component class="javax.swing.JSeparator" name="separatorKNNMaximumKFold">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="separatorKNNMaximumKFold" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelKNNMaximumTitle">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="labelKNNMaximumTitle.text"/>
+                <Property name="name" type="java.lang.String" value="labelKNNMaximumTitle" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelKNNMaximumValue">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="labelKNNMaximumValue" noResource="true"/>
+              </Properties>
+              <BindingProperties>
+                <BindingProperty name="text" source="sliderKNNMaximum" sourcePath="${value}" target="labelKNNMaximumValue" targetPath="text" updateStrategy="0" immediately="false"/>
+              </BindingProperties>
+            </Component>
+            <Component class="javax.swing.JSlider" name="sliderKNNMaximum">
+              <Properties>
+                <Property name="maximum" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="(application.getTrainingSetSize()/application.getKFold(false))*(application.getKFold(false)-1)" type="code"/>
+                </Property>
+                <Property name="minimum" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="sliderKNN" name="minimum" type="property"/>
+                </Property>
+                <Property name="value" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection component="sliderKNNMaximum" name="minimum" type="property"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="sliderKNNMaximum" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="checkBoxVisualizzaInfoDocumentoCorrente">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="checkBoxVisualizzaInfoDocumentoCorrente.text"/>
+                <Property name="name" type="java.lang.String" value="checkBoxVisualizzaInfoDocumentoCorrente" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelFileLog">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="labelFileLog.text"/>
+                <Property name="name" type="java.lang.String" value="labelFileLog" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="fieldLogFile">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="fieldLogFile.text"/>
+                <Property name="name" type="java.lang.String" value="fieldLogFile" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="bottoneSfogliaFileLog">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="bottoneSfogliaFileLog.text"/>
+                <Property name="name" type="java.lang.String" value="bottoneSfogliaFileLog" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sfogliaFiles"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JSeparator" name="separatorFileLogVisualizza">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="separatorFileLogVisualizza" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="checkBoxLogging">
+              <Properties>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" resourceKey="checkBoxLogging.text"/>
+                <Property name="name" type="java.lang.String" value="checkBoxLogging" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="checkBoxLoggingItemStateChanged"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="checkBoxOverwriteLogFile">
+              <Properties>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" resourceKey="checkBoxOverwriteLogFile.text"/>
+                <Property name="name" type="java.lang.String" value="checkBoxOverwriteLogFile" noResource="true"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
