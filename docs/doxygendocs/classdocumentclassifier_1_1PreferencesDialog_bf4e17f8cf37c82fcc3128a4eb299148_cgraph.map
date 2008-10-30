@@ -1,0 +1,5 @@
+<area shape="rect" href="$classdocumentclassifier_1_1DocumentClassifierApp.html#b9ddf8ca74c5f650412a87d34d1af656" title="documentclassifier.DocumentClassifierApp.getKFold" alt="" coords="457,5,815,32">
+<area shape="rect" href="$classdocumentclassifier_1_1DocumentClassifierApp.html#1f47d295f6eec224a79cdb0e987a62a2" title="documentclassifier.DocumentClassifierApp.getKFoldMaximum" alt="" coords="425,56,847,83">
+<area shape="rect" href="$classdocumentclassifier_1_1DocumentClassifierApp.html#f59af2d39854011f5417a845d96ba3da" title="documentclassifier.DocumentClassifierApp.getKFoldMinimum" alt="" coords="428,107,844,133">
+<area shape="rect" href="$classdocumentclassifier_1_1DocumentClassifierApp.html#10d37677b53e8c6cef2dbbbcda11ac5a" title="documentclassifier.DocumentClassifierApp.getKNNMaximum" alt="" coords="428,157,844,184">
+<area shape="rect" href="$classdocumentclassifier_1_1DocumentClassifierApp.html#187bbb67d82e8505c10d2b0721d0ef22" title="documentclassifier.DocumentClassifierApp.getTrainingSetSize" alt="" coords="427,208,845,235">
