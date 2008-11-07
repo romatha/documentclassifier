@@ -344,7 +344,6 @@
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
                   <action class="documentclassifier.DocumentClassifierView" id="Validation" methodName="Validation"/>
                 </Property>
-                <Property name="text" type="java.lang.String" resourceKey="validationMenuItem.text"/>
                 <Property name="name" type="java.lang.String" value="validationMenuItem" noResource="true"/>
               </Properties>
             </MenuItem>
@@ -376,6 +375,7 @@
                   <KeyStroke key="Ctrl+P"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="menuItemPreferences.text"/>
+                <Property name="toolTipText" type="java.lang.String" resourceKey="menuItemPreferences.toolTipText"/>
                 <Property name="name" type="java.lang.String" value="menuItemPreferences" noResource="true"/>
               </Properties>
               <Events>

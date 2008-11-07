@@ -245,7 +245,7 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
         scrollPanelLabelTitle.setFont(scrollPanelLabelTitle.getFont());
         scrollPanelLabelTitle.setName("scrollPanelLabelTitle"); // NOI18N
 
-        labelTitle.setFont(new java.awt.Font("DejaVu Sans", 1, 12));
+        labelTitle.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         labelTitle.setToolTipText(resourceMap.getString("labelTitle.toolTipText")); // NOI18N
         labelTitle.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         labelTitle.setName("labelTitle"); // NOI18N
@@ -426,7 +426,6 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
         fileMenu.add(openMenuItem);
 
         trainingMenuItem.setAction(actionMap.get("Validation")); // NOI18N
-        trainingMenuItem.setText(resourceMap.getString("validationMenuItem.text")); // NOI18N
         trainingMenuItem.setName("validationMenuItem"); // NOI18N
         fileMenu.add(trainingMenuItem);
 
@@ -443,6 +442,7 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
 
         menuItemPreferenze.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
         menuItemPreferenze.setText(resourceMap.getString("menuItemPreferences.text")); // NOI18N
+        menuItemPreferenze.setToolTipText(resourceMap.getString("menuItemPreferences.toolTipText")); // NOI18N
         menuItemPreferenze.setName("menuItemPreferences"); // NOI18N
         menuItemPreferenze.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1189,7 +1189,7 @@ private void keyPressedDocuments(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
      *  
      * @return                  Reference to the background task associated with this action.
      */
-    @Action(block = Task.BlockingScope.WINDOW)
+                @Action(block = Task.BlockingScope.WINDOW)
     public Task Validation() {
         return new ValidationTask(getApplication(),application.getMaximumKNNValidation(false));
     }
