@@ -123,12 +123,15 @@ public class PreferencesDialog extends javax.swing.JDialog {
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(documentclassifier.DocumentClassifierApp.class).getContext().getActionMap(PreferencesDialog.class, this);
         buttonOK.setAction(actionMap.get("OK")); // NOI18N
+        buttonOK.setToolTipText(resourceMap.getString("buttonOK.toolTipText")); // NOI18N
         buttonOK.setName("buttonOK"); // NOI18N
 
         buttonCancel.setAction(actionMap.get("cancel")); // NOI18N
+        buttonCancel.setToolTipText(resourceMap.getString("buttonCancel.toolTipText")); // NOI18N
         buttonCancel.setName("buttonCancel"); // NOI18N
 
         buttonReset.setAction(actionMap.get("reset")); // NOI18N
+        buttonReset.setToolTipText(resourceMap.getString("buttonReset.toolTipText")); // NOI18N
         buttonReset.setName("buttonReset"); // NOI18N
 
         tabbelPanePreferences.setName("tabbelPanePreferences"); // NOI18N
@@ -138,7 +141,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
         labelTrainingSetDirectory.setText(resourceMap.getString("labelTrainingSetDirectory.text")); // NOI18N
         labelTrainingSetDirectory.setName("labelTrainingSetDirectory"); // NOI18N
 
-        fieldTrainingSetDirectory.setText(resourceMap.getString("fieldTrainingSetDirectory.text")); // NOI18N
+        fieldTrainingSetDirectory.setToolTipText(resourceMap.getString("fieldTrainingSetDirectory.toolTipText")); // NOI18N
         fieldTrainingSetDirectory.setName("fieldTrainingSetDirectory"); // NOI18N
         fieldTrainingSetDirectory.addFocusListener(formListener);
 
@@ -154,7 +157,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(labelTrainingSetDirectory)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fieldTrainingSetDirectory, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+                .addComponent(fieldTrainingSetDirectory, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(buttonBrowseTrainingSetDirectory)
                 .addContainerGap())
@@ -167,7 +170,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
                     .addComponent(labelTrainingSetDirectory)
                     .addComponent(buttonBrowseTrainingSetDirectory)
                     .addComponent(fieldTrainingSetDirectory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(323, Short.MAX_VALUE))
+                .addContainerGap(317, Short.MAX_VALUE))
         );
 
         tabbelPanePreferences.addTab(resourceMap.getString("panelTrainingSet.TabConstraints.tabTitle"), panelTrainingSet); // NOI18N
@@ -178,11 +181,13 @@ public class PreferencesDialog extends javax.swing.JDialog {
         labelScraper.setText(resourceMap.getString("labelScraper.text")); // NOI18N
         labelScraper.setName("labelScraper"); // NOI18N
 
+        comboBoxScraper.setToolTipText(resourceMap.getString("comboBoxScraper.toolTipText")); // NOI18N
         comboBoxScraper.setName("comboBoxScraper"); // NOI18N
 
         separatorScraperPreprocessing.setName("separatorScraperPreprocessing"); // NOI18N
 
         labelPreprocessing.setText(resourceMap.getString("labelPreprocessing.text")); // NOI18N
+        labelPreprocessing.setToolTipText(resourceMap.getString("labelPreprocessing.toolTipText")); // NOI18N
         labelPreprocessing.setName("labelPreprocessing"); // NOI18N
 
         checkBoxStopWords.setSelected(true);
@@ -194,6 +199,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
         labelStopWords.setText(resourceMap.getString("labelStopWords.text")); // NOI18N
         labelStopWords.setName("labelStopWords"); // NOI18N
 
+        fieldStopWords.setToolTipText(resourceMap.getString("fieldStopWords.toolTipText")); // NOI18N
         fieldStopWords.setName("fieldStopWords"); // NOI18N
         fieldStopWords.addFocusListener(formListener);
 
@@ -210,6 +216,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
         labelCurrentStemmer.setText(resourceMap.getString("labelCurrentStemmer.text")); // NOI18N
         labelCurrentStemmer.setName("labelCurrentStemmer"); // NOI18N
 
+        comboBoxStemmers.setToolTipText(resourceMap.getString("comboBoxStemmers.toolTipText")); // NOI18N
         comboBoxStemmers.setName("comboBoxStemmers"); // NOI18N
 
         javax.swing.GroupLayout panelPreprocessingLayout = new javax.swing.GroupLayout(panelPreprocessing);
@@ -219,11 +226,11 @@ public class PreferencesDialog extends javax.swing.JDialog {
             .addGroup(panelPreprocessingLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelPreprocessingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(separatorScraperPreprocessing, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+                    .addComponent(separatorScraperPreprocessing, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
                     .addGroup(panelPreprocessingLayout.createSequentialGroup()
                         .addComponent(labelScraper)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(comboBoxScraper, 0, 528, Short.MAX_VALUE))
+                        .addComponent(comboBoxScraper, 0, 524, Short.MAX_VALUE))
                     .addComponent(labelPreprocessing)
                     .addGroup(panelPreprocessingLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
@@ -232,7 +239,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
                                 .addGap(12, 12, 12)
                                 .addComponent(labelStopWords, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fieldStopWords, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
+                                .addComponent(fieldStopWords, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(buttonBrowseStopWords))
                             .addComponent(checkBoxStopWords)
@@ -241,7 +248,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
                                 .addGap(12, 12, 12)
                                 .addComponent(labelCurrentStemmer)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(comboBoxStemmers, 0, 497, Short.MAX_VALUE)))))
+                                .addComponent(comboBoxStemmers, 0, 493, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         panelPreprocessingLayout.setVerticalGroup(
@@ -268,7 +275,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
                 .addGroup(panelPreprocessingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCurrentStemmer)
                     .addComponent(comboBoxStemmers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         tabbelPanePreferences.addTab(resourceMap.getString("panelPreprocessing.TabConstraints.tabTitle"), panelPreprocessing); // NOI18N
@@ -290,6 +297,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
 
         sliderKNN.setMaximum(application.getKNNMaximum());
         sliderKNN.setMinimum(1);
+        sliderKNN.setToolTipText(resourceMap.getString("sliderKNN.toolTipText")); // NOI18N
         sliderKNN.setValue(sliderKNN.getMinimum());
         sliderKNN.setName("sliderKNN"); // NOI18N
 
@@ -310,7 +318,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelClassificationLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelClassificationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(separatorMetricKNN, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+                    .addComponent(separatorMetricKNN, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelClassificationLayout.createSequentialGroup()
                         .addComponent(labelMetric)
                         .addGap(7, 7, 7)
@@ -322,7 +330,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(labelKNNValue, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sliderKNN, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE)))
+                        .addComponent(sliderKNN, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         panelClassificationLayout.setVerticalGroup(
@@ -342,7 +350,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
                         .addComponent(labelKNNTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(labelKNNValue))
                     .addComponent(sliderKNN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(244, Short.MAX_VALUE))
+                .addContainerGap(238, Short.MAX_VALUE))
         );
 
         tabbelPanePreferences.addTab(resourceMap.getString("panelClassification.TabConstraints.tabTitle"), panelClassification); // NOI18N
@@ -351,6 +359,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
 
         sliderKFold.setMaximum(application.getKFoldMaximum());
         sliderKFold.setMinimum(application.getKFoldMinimum());
+        sliderKFold.setToolTipText(resourceMap.getString("sliderKFold.toolTipText")); // NOI18N
         sliderKFold.setValue(application.getKFold(false));
         sliderKFold.setName("sliderKFold"); // NOI18N
         sliderKFold.addChangeListener(formListener);
@@ -361,10 +370,12 @@ public class PreferencesDialog extends javax.swing.JDialog {
         separatorKFoldLogging.setName("separatorKFoldLogging"); // NOI18N
 
         checkBoxStratified.setText(resourceMap.getString("checkBoxStratified.text")); // NOI18N
+        checkBoxStratified.setToolTipText(resourceMap.getString("checkBoxStratified.toolTipText")); // NOI18N
         checkBoxStratified.setName("checkBoxStratified"); // NOI18N
         checkBoxStratified.addChangeListener(formListener);
 
         checkBoxVisualizeListDocuments.setText(resourceMap.getString("checkBoxVisualizeListDocuments.text")); // NOI18N
+        checkBoxVisualizeListDocuments.setToolTipText(resourceMap.getString("checkBoxVisualizeListDocuments.toolTipText")); // NOI18N
         checkBoxVisualizeListDocuments.setName("checkBoxVisualizeListDocuments"); // NOI18N
 
         labelKFoldValue.setName("labelKFoldValue"); // NOI18N
@@ -384,16 +395,18 @@ public class PreferencesDialog extends javax.swing.JDialog {
 
         sliderKNNMaximum.setMaximum((application.getTrainingSetSize()/application.getKFold(false))*(application.getKFold(false)-1));
         sliderKNNMaximum.setMinimum(sliderKNN.getMinimum());
+        sliderKNNMaximum.setToolTipText(resourceMap.getString("sliderKNNMaximum.toolTipText")); // NOI18N
         sliderKNNMaximum.setValue(sliderKNNMaximum.getMinimum());
         sliderKNNMaximum.setName("sliderKNNMaximum"); // NOI18N
 
         checkBoxVisualizeCurrentDocument.setText(resourceMap.getString("checkBoxVisualizeCurrentDocument.text")); // NOI18N
+        checkBoxVisualizeCurrentDocument.setToolTipText(resourceMap.getString("checkBoxVisualizeCurrentDocument.toolTipText")); // NOI18N
         checkBoxVisualizeCurrentDocument.setName("checkBoxVisualizeCurrentDocument"); // NOI18N
 
         labelLogFile.setText(resourceMap.getString("labelLogFile.text")); // NOI18N
         labelLogFile.setName("labelLogFile"); // NOI18N
 
-        fieldLogFile.setText(resourceMap.getString("fieldLogFile.text")); // NOI18N
+        fieldLogFile.setToolTipText(resourceMap.getString("fieldLogFile.toolTipText")); // NOI18N
         fieldLogFile.setName("fieldLogFile"); // NOI18N
 
         buttonBrowseLogFile.setText(resourceMap.getString("buttonBrowseLogFile.text")); // NOI18N
@@ -404,11 +417,13 @@ public class PreferencesDialog extends javax.swing.JDialog {
 
         checkBoxLogging.setSelected(true);
         checkBoxLogging.setText(resourceMap.getString("checkBoxLogging.text")); // NOI18N
+        checkBoxLogging.setToolTipText(resourceMap.getString("checkBoxLogging.toolTipText")); // NOI18N
         checkBoxLogging.setName("checkBoxLogging"); // NOI18N
         checkBoxLogging.addItemListener(formListener);
 
         checkBoxOverwriteLogFile.setSelected(true);
         checkBoxOverwriteLogFile.setText(resourceMap.getString("checkBoxOverwriteLogFile.text")); // NOI18N
+        checkBoxOverwriteLogFile.setToolTipText(resourceMap.getString("checkBoxOverwriteLogFile.toolTipText")); // NOI18N
         checkBoxOverwriteLogFile.setName("checkBoxOverwriteLogFile"); // NOI18N
 
         javax.swing.GroupLayout panelValidationLayout = new javax.swing.GroupLayout(panelValidation);
@@ -418,7 +433,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelValidationLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelValidationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(separatorLogFileVisualize, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+                    .addComponent(separatorLogFileVisualize, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelValidationLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(checkBoxStratified))
@@ -427,21 +442,21 @@ public class PreferencesDialog extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(labelKFoldValue, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sliderKFold, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE))
-                    .addComponent(separatorKFoldLogging, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+                        .addComponent(sliderKFold, javax.swing.GroupLayout.DEFAULT_SIZE, 395, Short.MAX_VALUE))
+                    .addComponent(separatorKFoldLogging, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelValidationLayout.createSequentialGroup()
                         .addComponent(labelKNNMaximumTitle)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(labelKNNMaximumValue, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sliderKNNMaximum, javax.swing.GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE))
-                    .addComponent(separatorKNNMaximumKFold, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+                        .addComponent(sliderKNNMaximum, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE))
+                    .addComponent(separatorKNNMaximumKFold, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
                     .addComponent(checkBoxLogging, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelValidationLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(labelLogFile)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(fieldLogFile, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
+                        .addComponent(fieldLogFile, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(buttonBrowseLogFile)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -488,7 +503,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
                 .addComponent(checkBoxVisualizeCurrentDocument)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(checkBoxVisualizeListDocuments)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         tabbelPanePreferences.addTab(resourceMap.getString("panelValidation.TabConstraints.tabTitle"), panelValidation); // NOI18N
