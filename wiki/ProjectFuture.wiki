@@ -10,8 +10,9 @@ I hope someone will find it useful.
 = Details =
 If someone wants to improve it, he/she is welcome, and can do it under the terms of the GPLv3, but there won't be anymore updates on the code from me.
 For example, it would be nice to
+  # Refactor the code using AspectJ, or any other AOP framework
   # Parallelize classification, either using multithreading, and/or using Java libraries for Grid computing (have a look at GridGain: http://www.gridgain.com/)
-  # Insert support for 2D or 3D visualization of the document's histograms, and/or of the TF-IDF vectors in the VSM, using libraries such as:
+  # Insert support for 2D or 3D visualization of the documents' histograms, and/or of the TF-IDF vectors in the VSM, using libraries such as:
     * http://www.javaview.de/
     * http://www.jfree.org/jfreechart/
     * http://www.softwarefx.com/sfxJavaProducts/CFXforJava/
