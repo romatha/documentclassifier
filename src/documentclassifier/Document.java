@@ -1,4 +1,3 @@
-
 package documentclassifier;
 
 import java.io.BufferedReader;
@@ -21,8 +20,8 @@ import org.tartarus.snowball.SnowballProgram;
  * @author      Salvo Danilo Giuffrida (giuffsalvo@hotmail.it, salvodanilogiuffrida@gmail.com)
  */
 class Document {
-    
-    private String title,text,path;
+
+    private String title,  text,  path;
     /**
      * A document can also belong to more than one category, of copies of it are present in multiple
      * subdirectories of the training set. To model this situation, the categories a document belongs
@@ -33,8 +32,8 @@ class Document {
      * The histogram of each document is represented as a map, having as keys the strings of its unique terms,
      * and as values the relative frequency of each term inside the document.
      */
-    private Map<String,Double> histogram;
-    
+    private Map<String, Double> histogram;
+
     /**
      * This constructor creates a new document with the title, text, initial category, and URL specified as
      * input parameters.
@@ -50,7 +49,7 @@ class Document {
         try {
             this.title = title;
             this.text = text;
-            this.categories=new HashSet<String>();
+            this.categories = new HashSet<String>();
             categories.add(initialCategory);
             this.path = path;
             /**
@@ -68,7 +67,7 @@ class Document {
             DocumentClassifierView.showErrorMessage(ex.toString());
         }
     }
-    
+
     /**
      * This constructor creates a new document without any category.
      * It is used to create an instance of this class representing the current query document.
@@ -80,9 +79,9 @@ class Document {
      * 
      */
     public Document(String title, String text, String path) {
-        this(title,text,null,path);
+        this(title, text, null, path);
     }
-    
+
     /**
      * This constructor creates a new document with only the title.
      * It is used to create an instance representing a query, like in a search engine, from whom the most relevant documents respect
@@ -91,9 +90,9 @@ class Document {
      * @param   query            The query to send to the information retrieval system.
      */
     public Document(String query) {
-        this(query,"",null);
+        this(query, "", null);
     }
-    
+
     /**
      * This method creates the histogram of the document represented by this instance; if necessary the text
      * is pre-processed (removing stopwords and stemming the remaining terms) before calculating the frequency
@@ -104,11 +103,11 @@ class Document {
      *                          of type {@link Double}.
      */
     private Map<String, Double> createHistogram() throws Exception {
-        
-        DocumentClassifierApp application=DocumentClassifierApp.getApplication();
-        boolean isStemming=application.isStemming(false);
-        boolean isRemovalStopWords=application.isRemovalStopWords(false);
-        
+
+        DocumentClassifierApp application = DocumentClassifierApp.getApplication();
+        boolean isStemming = application.isStemming(false);
+        boolean isRemovalStopWords = application.isRemovalStopWords(false);
+
         /**
          * Even if the user has chosen (through the Preferences panel) not to apply stemming to
          * document terms, it is necessary to create the classes that do it, otherwise the compiler
@@ -118,24 +117,24 @@ class Document {
         SnowballProgram stemmer = (SnowballProgram) stemClass.newInstance();
         @SuppressWarnings("unchecked")
         Method stemMethod = stemClass.getMethod("stem", new Class[0]);
-        
+
         Object[] emptyArgs = new Object[0];
         String specialCharacters = " \t\n\r\f,;.:!'\"()?[]=-@";
-        
+
         Map<String, Double> documentHistogram = new HashMap<String, Double>();
         String currentToken;
         Double frequency;
         int weight;
         String row;
-        
+
         /**
          * I build the set of stopwords, by reading the appropriate file.
          */
         Set<String> stopWordsList = new HashSet<String>();
         BufferedReader stopWordsBR;
-        File stopWordsListFile=new File(DocumentClassifierApp.getApplication().getStopWordsList(false));
+        File stopWordsListFile = new File(DocumentClassifierApp.getApplication().getStopWordsList(false));
         String[] fields;
-        if(isRemovalStopWords) {
+        if (isRemovalStopWords) {
             /**
              * If the user has chosen not to enable the removal of stopwords, no element is added
              * to the set, which remains empty.
@@ -151,7 +150,7 @@ class Document {
             }
             stopWordsBR.close();
         }
-        
+
         /**
          * Pre-processing of the text.
          * The title and text of the document are represented as two strings, belonging to an array,
@@ -184,8 +183,8 @@ class Document {
                  * histogram of the document.
                  */
                 if (!stopWordsList.contains(currentToken) && !currentToken.matches("\\d+")) {
-                    
-                    if(isStemming) {
+
+                    if (isStemming) {
                         /**
                          * Stemming of the current term: The stemmer creates a new term containing the root
                          * of the one given in input.
@@ -207,7 +206,7 @@ class Document {
                 }
             }
         }
-        
+
         /**
          * The histogram has been completed-->Now it is necessary to normalize its frequencies
          * to the length of the document, making them relative.
@@ -227,7 +226,7 @@ class Document {
          */
         return Collections.unmodifiableMap(documentHistogram);
     }
-    
+
     /**
      * Accessor method to read the document's histogram.
      * 
@@ -236,7 +235,7 @@ class Document {
     public Map<String, Double> getHistogram() {
         return histogram;
     }
-    
+
     /**
      * Accessor method to read the set of categories this document belongs to.
      * 
@@ -245,7 +244,7 @@ class Document {
     public Set<String> getCategories() {
         return categories;
     }
-    
+
     /**
      * This method adds the name of a category to the set.
      * 
@@ -254,7 +253,7 @@ class Document {
     public void addCategory(String category) {
         categories.add(category);
     }
-    
+
     /**
      * This accessor method returns the URL from where it is possible to get the original document (file PDF, HTML, ecc...)
      * represented by this instance.
@@ -265,7 +264,7 @@ class Document {
     public String getPath() {
         return path;
     }
-    
+
     /**
      * Accessor method to read the text of the document represented by this instance.
      * 
@@ -274,7 +273,7 @@ class Document {
     public String getText() {
         return text;
     }
-    
+
     /**
      * Accessor method to read the title of the document represented by this instance.
      * 
@@ -283,7 +282,7 @@ class Document {
     public String getTitle() {
         return title;
     }
-    
+
     /**
      * Two documents are considered equals if they have both the same title and the same text.
      * 
@@ -316,5 +315,4 @@ class Document {
         hash = 71 * hash + (this.text != null ? this.text.hashCode() : 0);
         return hash;
     }
-    
 }

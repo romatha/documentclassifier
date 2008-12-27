@@ -1,9 +1,10 @@
-
 package documentclassifier;
 
 import org.jdesktop.application.Action;
 
 public class DocumentClassifierAboutBox extends javax.swing.JDialog {
+
+    private static final long serialVersionUID = 1L;
 
     public DocumentClassifierAboutBox(java.awt.Frame parent) {
         super(parent);
@@ -11,7 +12,8 @@ public class DocumentClassifierAboutBox extends javax.swing.JDialog {
         getRootPane().setDefaultButton(closeButton);
     }
 
-    @Action public void closeAboutBox() {
+    @Action
+    public void closeAboutBox() {
         setVisible(false);
     }
 
@@ -118,10 +120,8 @@ public class DocumentClassifierAboutBox extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel appAuthorLabel;
     private javax.swing.JButton closeButton;
     // End of variables declaration//GEN-END:variables
-    
 }

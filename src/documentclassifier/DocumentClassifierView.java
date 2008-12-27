@@ -73,7 +73,7 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
     /**
      * Resource bundle for this class' localized resources.
      */
-    private ResourceBundle documentClassifierViewResources=ResourceBundle.getBundle("documentclassifier/resources/DocumentClassifierView");
+    private ResourceBundle documentClassifierViewResources = ResourceBundle.getBundle("documentclassifier/resources/DocumentClassifierView");
     /**
      * This variable mantains the reference to the current query document.
      */
@@ -97,7 +97,7 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
 
         super(app);
         initComponents();
-        
+
         infoDocuments = new LinkedList<Map<String, Object>>();
         this.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         /**
@@ -179,7 +179,7 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
             }
         });
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -238,6 +238,7 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(documentclassifier.DocumentClassifierApp.class).getContext().getActionMap(DocumentClassifierView.class, this);
         buttonRead.setAction(actionMap.get("readInputDocument")); // NOI18N
+        buttonRead.setToolTipText(resourceMap.getString("buttonRead.toolTipText")); // NOI18N
         buttonRead.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         buttonRead.setName("buttonRead"); // NOI18N
 
@@ -245,7 +246,7 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
         scrollPanelLabelTitle.setFont(scrollPanelLabelTitle.getFont());
         scrollPanelLabelTitle.setName("scrollPanelLabelTitle"); // NOI18N
 
-        labelTitle.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
+        labelTitle.setFont(new java.awt.Font("DejaVu Sans", 1, 12));
         labelTitle.setToolTipText(resourceMap.getString("labelTitle.toolTipText")); // NOI18N
         labelTitle.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         labelTitle.setName("labelTitle"); // NOI18N
@@ -426,6 +427,7 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
         fileMenu.add(openMenuItem);
 
         trainingMenuItem.setAction(actionMap.get("Validation")); // NOI18N
+        trainingMenuItem.setText(resourceMap.getString("validationMenuItem.text")); // NOI18N
         trainingMenuItem.setName("validationMenuItem"); // NOI18N
         fileMenu.add(trainingMenuItem);
 
@@ -1189,7 +1191,7 @@ private void keyPressedDocuments(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
      *  
      * @return                  Reference to the background task associated with this action.
      */
-                @Action(block = Task.BlockingScope.WINDOW)
+                                @Action(block = Task.BlockingScope.WINDOW)
     public Task Validation() {
         return new ValidationTask(getApplication(),application.getMaximumKNNValidation(false));
     }

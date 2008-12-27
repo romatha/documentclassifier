@@ -14,7 +14,7 @@ public class Yylex implements java_cup.runtime.Scanner {
     private final int YY_BOL = 65536;
     private final int YY_EOF = 65537;
     private String title = "",  news = "",  link = "";                  //Strings that are set by the lexical analyzer during the reading of the HTML page, and passed as tokens.
-    private int tablesCounter = 0, cellsCounter = 0, spanCounter = 0;   //Variables that control if the lexical analyzer is currently inside equal tags, one inside each other.
+    private int tablesCounter = 0,  cellsCounter = 0,  spanCounter = 0;   //Variables that control if the lexical analyzer is currently inside equal tags, one inside each other.
     private boolean readNews = false;
     /**
      * 2-columns matrix containing, for each sequence corresponding to a special HTML character, the graphical rappresentation of such character.
@@ -110,7 +110,7 @@ public class Yylex implements java_cup.runtime.Scanner {
         {"›", "&rsaquo;"},
         {"€", "&euro;"},
     };
-    
+
     /**
      * Substitutes the special HTML characters eventually present in the input string,
      * with their corresponding visual representation.
@@ -132,7 +132,7 @@ public class Yylex implements java_cup.runtime.Scanner {
     private char yy_buffer[];
     private boolean yy_at_bol;
     private int yy_lexical_state;
-    
+
     public Yylex(java.io.Reader reader) {
         this();
         if (null == reader) {
@@ -140,7 +140,7 @@ public class Yylex implements java_cup.runtime.Scanner {
         }
         yy_reader = new java.io.BufferedReader(reader);
     }
-    
+
     public Yylex(java.io.InputStream instream) {
         this();
         if (null == instream) {
@@ -148,7 +148,7 @@ public class Yylex implements java_cup.runtime.Scanner {
         }
         yy_reader = new java.io.BufferedReader(new java.io.InputStreamReader(instream));
     }
-    
+
     private Yylex() {
         yy_buffer = new char[YY_BUFFER_SIZE];
         yy_buffer_read = 0;
@@ -171,11 +171,11 @@ public class Yylex implements java_cup.runtime.Scanner {
         65,
         89
     };
-    
+
     private void yybegin(int state) {
         yy_lexical_state = state;
     }
-    
+
     private int yy_advance()
             throws java.io.IOException {
         int next_read;

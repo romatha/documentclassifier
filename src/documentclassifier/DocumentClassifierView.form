@@ -73,6 +73,7 @@
             <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
               <action class="documentclassifier.DocumentClassifierView" id="readInputDocument" methodName="readInputDocument"/>
             </Property>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="buttonRead.toolTipText"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="name" type="java.lang.String" value="buttonRead" noResource="true"/>
           </Properties>
@@ -344,6 +345,7 @@
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
                   <action class="documentclassifier.DocumentClassifierView" id="Validation" methodName="Validation"/>
                 </Property>
+                <Property name="text" type="java.lang.String" resourceKey="validationMenuItem.text"/>
                 <Property name="name" type="java.lang.String" value="validationMenuItem" noResource="true"/>
               </Properties>
             </MenuItem>

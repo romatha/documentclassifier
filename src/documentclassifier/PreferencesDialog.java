@@ -3,7 +3,6 @@ package documentclassifier;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.io.File;
-import java.lang.Integer;
 import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +13,8 @@ import java.util.prefs.Preferences;
 import javax.swing.JFileChooser;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileFilter;
-import org.jdesktop.application.*;
+import org.jdesktop.application.Action;
+import org.jdesktop.application.FrameView;
 
 /**
  * This class represents the JDialog used to modify the program's preferences, such as
@@ -25,20 +25,18 @@ import org.jdesktop.application.*;
  * @author      Salvo Danilo Giuffrida (giuffsalvo@hotmail.it, salvodanilogiuffrida@gmail.com)
  */
 public class PreferencesDialog extends javax.swing.JDialog {
-    
-    private static final long serialVersionUID=0;
-    
+
+    private static final long serialVersionUID = 0;
     private final DocumentClassifierApp application = DocumentClassifierApp.getApplication();
     private final Preferences preferences = application.getPreferences();
     private ResourceBundle preferencesDialogResources = java.util.ResourceBundle.getBundle("documentclassifier/resources/PreferencesDialog");
-    
     /**
      * An instance of the class {@link MapDefaultPreferences} is necessary to refer, in an
      * indirect way, to the names of the various preferences, and if necessary to their
      * default values.
      */
     private final MapDefaultPreferences mapPreferences = application.getMapPreferences();
-    private String trainingSetDirectory,  stopWordsList, logFile;
+    private String trainingSetDirectory,  stopWordsList,  logFile;
 
     /**
      * Constructor that creates a new PreferencesDialog.
@@ -46,7 +44,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
      * @param   parent      The frame father of this JDialog.
      * @param   modal       A boolean indicating if the JDialog should be modal or not.
      */
-    protected PreferencesDialog(FrameView parent, boolean modal) {
+    PreferencesDialog(FrameView parent, boolean modal) {
         super(parent.getFrame(), modal);
         initComponents();
         preferences.addPreferenceChangeListener(application);
@@ -591,7 +589,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
             }
         }
     }// </editor-fold>//GEN-END:initComponents
-    
+
     /**
      * This method updates the value of the preference specified in the 1st parameter
      * with the new value, specified in the 3rd parameter, if it's different from the
@@ -602,12 +600,12 @@ public class PreferencesDialog extends javax.swing.JDialog {
      * @param   updatedValue        The new value that must be assigned to it.
      */
     private void updatePreference(String preferenceName, String defaultValue, String updatedValue) {
-        
+
         if (!preferences.get(preferenceName, defaultValue).equals(updatedValue)) {
             preferences.put(preferenceName, updatedValue);
         }
     }
-    
+
     /**
      * This action is called each time that the user presses the button 'Cancel' in the GUI.
      * Its only task is to close the JDialog.
@@ -616,7 +614,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
     public void cancel() {
         dispose();
     }
-    
+
     /**
      * This method is called during initialization of the GUI, each time that the user decides to open this JDialog,
      * clicking on the menù item 'Modify'->'Preferences' in the menù bar.
@@ -641,15 +639,13 @@ public class PreferencesDialog extends javax.swing.JDialog {
             for (FocusListener FL : focusListenersStopWords) {
                 fieldStopWords.removeFocusListener(FL);
             }
-            
+
             /**
              * The properties of the GUI's elements are set.
-             */
-            
-            //The path of the training set's directory
+             */            //The path of the training set's directory
             trainingSetDirectory = application.getTrainingSetDirectory(reset);
             fieldTrainingSetDirectory.setText(trainingSetDirectory);
-            
+
             //The current scraper
             String scraperName = application.getScraper(reset).getClass().getName();
             List<Class> scrapers = DocumentClassifierApp.getClassesForPackage(application.getScrapersPackageName());
@@ -668,7 +664,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
                     }
                 }
             }
-            
+
             //If removal of stopwords from documents is enabled or not.
             checkBoxStopWords.setSelected(application.isRemovalStopWords(reset));
             fieldStopWords.setEnabled(checkBoxStopWords.isSelected());
@@ -696,7 +692,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
                     comboBoxStemmers.setSelectedItem(currentTrimmedStemmerName);
                 }
             }
-            
+
             //The current metric.
             if (application.getMetric(reset).equals("TF-IDF")) {
                 buttonTFIDF.setSelected(true);
@@ -706,32 +702,32 @@ public class PreferencesDialog extends javax.swing.JDialog {
 
             //The value of K for the K-NN.
             sliderKNN.setValue(application.getKNN(reset));
-            
+
             //The maximum value of K for the K-NN, during K-Fold cross validation.
             sliderKNNMaximum.setValue(application.getMaximumKNNValidation(reset));
-            
+
             //The value of K for the K-Fold cross validation.
             sliderKFold.setValue(application.getKFold(reset));
-            
+
             //If partitioning for the K-Fold cross validation must be stratified or not.
             checkBoxStratified.setSelected(application.isStratified(reset));
-            
+
             //If logging during the validation phase is enabled or not.
             checkBoxLogging.setSelected(application.isLogging(reset));
-            
+
             //The path of the log file.
-            logFile=application.getLogFile(reset);
+            logFile = application.getLogFile(reset);
             fieldLogFile.setText(logFile);
-            
+
             //If the log file must be overwritten each time it is opened.
             checkBoxOverwriteLogFile.setSelected(application.isOverwriteLogFile(reset));
-            
+
             //If the current document must be visualized during the validation phase.
             checkBoxVisualizeCurrentDocument.setSelected(application.isVisualizeCurrentDocument(reset));
-            
+
             //If the list of document of the training set, ranked to the query, must be visualized or not during the validation phase.
             checkBoxVisualizeListDocuments.setSelected(application.isVisualizeListRankedDocuments(reset));
-            
+
             /**
              * The FocusListeners are re-enabled.
              */
@@ -747,7 +743,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
             DocumentClassifierView.showErrorMessage(ex.toString());
         }
     }
-    
+
     /**
      * This action is called each time that the user presses the button 'OK'.
      * Its task is to update the values of the preferences, corresponding to those GUI's components whose
@@ -755,61 +751,61 @@ public class PreferencesDialog extends javax.swing.JDialog {
      */
     @Action
     public void OK() {
-        
+
         String currentKey;
-        
-        currentKey=MapDefaultPreferences.SCRAPER;
+
+        currentKey = MapDefaultPreferences.SCRAPER;
         updatePreference(currentKey, mapPreferences.get(currentKey), comboBoxScraper.getSelectedItem().getClass().getName());
-        
-        currentKey=MapDefaultPreferences.isREMOVALSTOPWORDS;
+
+        currentKey = MapDefaultPreferences.isREMOVALSTOPWORDS;
         updatePreference(currentKey, mapPreferences.get(currentKey), String.valueOf(checkBoxStopWords.isSelected()));
-        
+
         if (checkBoxStopWords.isSelected()) {
             checkPath(new FocusEvent(fieldStopWords, FocusEvent.FOCUS_LOST));
         }
-        currentKey=MapDefaultPreferences.STOPWORDSLIST;
+        currentKey = MapDefaultPreferences.STOPWORDSLIST;
         updatePreference(currentKey, mapPreferences.get(currentKey), fieldStopWords.getText());
-        
-        currentKey=MapDefaultPreferences.isSTEMMING;
+
+        currentKey = MapDefaultPreferences.isSTEMMING;
         updatePreference(currentKey, mapPreferences.get(currentKey), String.valueOf(checkBoxStemming.isSelected()));
-        
-        currentKey=MapDefaultPreferences.STEMMER;
+
+        currentKey = MapDefaultPreferences.STEMMER;
         updatePreference(currentKey, mapPreferences.get(currentKey), application.getStemmersPackageName() + "." + ((String) comboBoxStemmers.getSelectedItem()));
-        
+
         checkPath(new FocusEvent(fieldTrainingSetDirectory, FocusEvent.FOCUS_LOST));
-        currentKey=MapDefaultPreferences.TRAININGSETDIRECTORY;
+        currentKey = MapDefaultPreferences.TRAININGSETDIRECTORY;
         updatePreference(currentKey, mapPreferences.get(currentKey), fieldTrainingSetDirectory.getText());
-        
-        currentKey=MapDefaultPreferences.METRIC;
+
+        currentKey = MapDefaultPreferences.METRIC;
         updatePreference(currentKey, mapPreferences.get(currentKey), (buttonTFIDF.isSelected()) ? "TF-IDF" : "Bhattacharrya");
-        
-        currentKey=MapDefaultPreferences.KNN;
+
+        currentKey = MapDefaultPreferences.KNN;
         updatePreference(currentKey, mapPreferences.get(currentKey), String.valueOf(sliderKNN.getValue()));
-        
-        currentKey=MapDefaultPreferences.MAXKNNVALIDATION;
+
+        currentKey = MapDefaultPreferences.MAXKNNVALIDATION;
         updatePreference(currentKey, mapPreferences.get(currentKey), String.valueOf(sliderKNNMaximum.getValue()));
-        
-        currentKey=MapDefaultPreferences.KFOLD;
+
+        currentKey = MapDefaultPreferences.KFOLD;
         updatePreference(currentKey, mapPreferences.get(currentKey), String.valueOf(sliderKFold.getValue()));
-        
-        currentKey=MapDefaultPreferences.isSTRATIFIED;
+
+        currentKey = MapDefaultPreferences.isSTRATIFIED;
         updatePreference(currentKey, mapPreferences.get(currentKey), String.valueOf(checkBoxStratified.isSelected()));
-        
-        currentKey=MapDefaultPreferences.isLOGGING;
+
+        currentKey = MapDefaultPreferences.isLOGGING;
         updatePreference(currentKey, mapPreferences.get(currentKey), String.valueOf(checkBoxLogging.isSelected()));
-        
-        currentKey=MapDefaultPreferences.LOGFILE;
+
+        currentKey = MapDefaultPreferences.LOGFILE;
         updatePreference(currentKey, mapPreferences.get(currentKey), String.valueOf(fieldLogFile.getText()));
-        
-        currentKey=MapDefaultPreferences.isOVERWRITELOGFILE;
+
+        currentKey = MapDefaultPreferences.isOVERWRITELOGFILE;
         updatePreference(currentKey, mapPreferences.get(currentKey), String.valueOf(checkBoxOverwriteLogFile.isSelected()));
-        
-        currentKey=MapDefaultPreferences.isVISUALIZECURRENTDOCUMENT;
+
+        currentKey = MapDefaultPreferences.isVISUALIZECURRENTDOCUMENT;
         updatePreference(currentKey, mapPreferences.get(currentKey), String.valueOf(checkBoxVisualizeCurrentDocument.isSelected()));
-        
-        currentKey=MapDefaultPreferences.isVISUALIZELISTRANKEDDOCUMENTS;
+
+        currentKey = MapDefaultPreferences.isVISUALIZELISTRANKEDDOCUMENTS;
         updatePreference(currentKey, mapPreferences.get(currentKey), String.valueOf(checkBoxVisualizeListDocuments.isSelected()));
-        
+
         //Once the new values of the modified preferences have been saved, the JDialog is closed.
         dispose();
     }
@@ -821,7 +817,7 @@ public class PreferencesDialog extends javax.swing.JDialog {
     public void reset() {
         initializeInterface(true);
     }
-    
+
     /**
      * This method is called each time that a JFileDialog must be opened, to select
      * a file or directory from the filesystem.
@@ -831,9 +827,9 @@ public class PreferencesDialog extends javax.swing.JDialog {
 private void browse(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browse
     try {
         JFileChooser fileChooser = new JFileChooser();
-        Object source=evt.getSource();
+        Object source = evt.getSource();
         boolean isTrainingSet = source.equals(buttonBrowseTrainingSetDirectory);
-        boolean isStopwordsList=source.equals(buttonBrowseStopWords);
+        boolean isStopwordsList = source.equals(buttonBrowseStopWords);
         if (isTrainingSet) {
             fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
             fileChooser.setCurrentDirectory(new File(trainingSetDirectory).getParentFile());
@@ -926,7 +922,7 @@ private void checkPath(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_checkPa
                 } else {
                     DocumentClassifierView.showErrorMessage(preferencesDialogResources.getString("messages.invalidStopWords"));
                     referenceField.setText(oldPath);
-                    if(!(new File(oldPath).isFile())) {
+                    if (!(new File(oldPath).isFile())) {
                         checkBoxStopWords.setEnabled(false);
                     }
                 }
@@ -961,13 +957,13 @@ private void checkPath(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_checkPa
      * @param evt
      */
 private void fixKFold(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_fixKFold
-    
+
     int currentKFold = sliderKFold.getValue();
-    int trainingSetSize=application.getTrainingSetSize();
+    int trainingSetSize = application.getTrainingSetSize();
     if (checkBoxStratified.isSelected()) {
         final int numberCategories = application.getTrainingSet().size();
         Map<Integer, Integer> possibleKFolds = new HashMap<Integer, Integer>();
-        Entry<Integer, Integer> minimumDistance = new AbstractMap.SimpleEntry<Integer,Integer>(0, Integer.MAX_VALUE);
+        Entry<Integer, Integer> minimumDistance = new AbstractMap.SimpleEntry<Integer, Integer>(0, Integer.MAX_VALUE);
         int i = 1;
         int possibleKFold, currentDistance;
         possibleKFold = trainingSetSize / (numberCategories * i);
@@ -977,28 +973,27 @@ private void fixKFold(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_fixK
                 currentDistance = Math.abs(possibleKFold - currentKFold);
                 possibleKFolds.put(possibleKFold, currentDistance);
                 if (currentDistance < minimumDistance.getValue()) {
-                    minimumDistance = new AbstractMap.SimpleEntry<Integer,Integer>(possibleKFold, currentDistance);
+                    minimumDistance = new AbstractMap.SimpleEntry<Integer, Integer>(possibleKFold, currentDistance);
                 }
             }
             i++;
             possibleKFold = trainingSetSize / (numberCategories * i);
         }
-        int newKFold=minimumDistance.getKey();
+        int newKFold = minimumDistance.getKey();
         sliderKFold.setValue(newKFold);
-        sliderKNNMaximum.setMaximum((trainingSetSize/newKFold/numberCategories)*numberCategories*(currentKFold-1));
+        sliderKNNMaximum.setMaximum((trainingSetSize / newKFold / numberCategories) * numberCategories * (currentKFold - 1));
     } else {
         sliderKFold.setMaximum(application.getKFoldMaximum());
-        sliderKNNMaximum.setMaximum((trainingSetSize/currentKFold)*(currentKFold-1));
+        sliderKNNMaximum.setMaximum((trainingSetSize / currentKFold) * (currentKFold - 1));
     }
 }//GEN-LAST:event_fixKFold
 
 private void checkBoxLoggingItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_checkBoxLoggingItemStateChanged
 
-    boolean isLoggingEnabled=checkBoxLogging.isSelected();
+    boolean isLoggingEnabled = checkBoxLogging.isSelected();
     fieldLogFile.setEnabled(isLoggingEnabled);
     checkBoxOverwriteLogFile.setEnabled(isLoggingEnabled);
 }//GEN-LAST:event_checkBoxLoggingItemStateChanged
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     javax.swing.JRadioButton buttonBhattacharrya;
     javax.swing.JButton buttonBrowseLogFile;
@@ -1049,5 +1044,4 @@ private void checkBoxLoggingItemStateChanged(java.awt.event.ItemEvent evt) {//GE
     javax.swing.JTabbedPane tabbelPanePreferences;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
-    
 }
