@@ -246,13 +246,14 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
         scrollPanelLabelTitle.setFont(scrollPanelLabelTitle.getFont());
         scrollPanelLabelTitle.setName("scrollPanelLabelTitle"); // NOI18N
 
-        labelTitle.setFont(new java.awt.Font("DejaVu Sans", 1, 12));
+        labelTitle.setFont(new java.awt.Font("DejaVu Sans", 1, 12)); // NOI18N
         labelTitle.setToolTipText(resourceMap.getString("labelTitle.toolTipText")); // NOI18N
         labelTitle.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         labelTitle.setName("labelTitle"); // NOI18N
         scrollPanelLabelTitle.setViewportView(labelTitle);
 
         buttonStop.setAction(actionMap.get("stopCurrentTask")); // NOI18N
+        buttonStop.setToolTipText(resourceMap.getString("buttonStop.toolTipText")); // NOI18N
         buttonStop.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         buttonStop.setName("buttonStop"); // NOI18N
 
@@ -385,7 +386,7 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
                 .addContainerGap())
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scrollPanelLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 731, Short.MAX_VALUE)
+                .addComponent(scrollPanelLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(buttonFind)
                 .addContainerGap())
@@ -409,7 +410,7 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
                     .addComponent(buttonFind)
                     .addComponent(scrollPanelLabelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(splitPaneVertical, javax.swing.GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE)
+                .addComponent(splitPaneVertical, javax.swing.GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -488,7 +489,7 @@ public class DocumentClassifierView extends FrameView implements PreferenceChang
             .addGroup(statusPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusMessageLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 635, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 637, Short.MAX_VALUE)
                 .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(statusAnimationLabel)
