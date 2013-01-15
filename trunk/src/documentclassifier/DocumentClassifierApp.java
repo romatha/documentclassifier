@@ -45,7 +45,7 @@ import org.jdesktop.application.SingleFrameApplication;
  *  - A method ({@link #readDocument readDocument}) to read the title and the text of a document from the file system,
  * and from these create an instance of the class {@link Document}
  * 
- * @author      Salvo Danilo Giuffrida (giuffsalvo@hotmail.it, salvodanilogiuffrida@gmail.com)
+ * @author      Salvo Danilo Giuffrida (salvod.giuffrida@gmail.com)
  * @see         SingleFrameApplication
  */
 public class DocumentClassifierApp extends SingleFrameApplication implements PreferenceChangeListener {
