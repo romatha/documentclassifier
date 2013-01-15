@@ -6,7 +6,7 @@ import java.io.InputStream;
 /**
  * Interface that every scraper must implement.
  * 
- * @author      Salvo Danilo Giuffrida (giuffsalvo@hotmail.it, salvodanilogiuffrida@gmail.com)
+ * @author      Salvo Danilo Giuffrida (salvod.giuffrida@gmail.com)
  */
 public interface Scraper {
     

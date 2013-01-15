@@ -21,7 +21,7 @@ import java.util.Set;
  * Using the information present in each entry, the Comparator orders the training set's documents depending on the cosine
  * of the angle between each one of them and the query document.
  * 
- * @author      Salvo Danilo Giuffrida (giuffsalvo@hotmail.it, salvodanilogiuffrida@gmail.com)
+ * @author      Salvo Danilo Giuffrida (salvod.giuffrida@gmail.com)
  * @see         Comparator
  */
 public class TFIDFComparator implements Comparator<Entry<Map<String,Object>, Map<String, Double>>> {

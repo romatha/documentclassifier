@@ -14,7 +14,7 @@ import java.util.HashMap;
  * Analogously, to modify the default values of the various preferences, the programmer simply needs
  * modify a row of this class' constructor.
  * 
- * @author      Salvo Danilo Giuffrida (giuffsalvo@hotmail.it, salvodanilogiuffrida@gmail.com)
+ * @author      Salvo Danilo Giuffrida (salvod.giuffrida@gmail.com)
  */
 public class MapDefaultPreferences extends HashMap<String, String> {
 

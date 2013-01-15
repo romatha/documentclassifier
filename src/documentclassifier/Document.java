@@ -17,7 +17,7 @@ import org.tartarus.snowball.SnowballProgram;
  * the URL (local or remote) from where it is possible to retrieve the original, and the histogram of its
  * terms.
  *
- * @author      Salvo Danilo Giuffrida (giuffsalvo@hotmail.it, salvodanilogiuffrida@gmail.com)
+ * @author      Salvo Danilo Giuffrida (salvod.giuffrida@gmail.com)
  */
 class Document {
 

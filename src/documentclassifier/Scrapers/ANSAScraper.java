@@ -9,7 +9,7 @@ import java.io.InputStream;
  * Scraper that is able to get the title and text from web pages of the ANSA's web site (www.ansa.it)
  * that contain single news.
  * 
- * @author      Salvo Danilo Giuffrida (giuffsalvo@hotmail.it, salvodanilogiuffrida@gmail.com)
+ * @author      Salvo Danilo Giuffrida (salvod.giuffrida@gmail.com)
  */
 public class ANSAScraper implements Scraper {
     

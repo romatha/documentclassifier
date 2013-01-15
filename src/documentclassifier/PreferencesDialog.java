@@ -22,7 +22,7 @@ import org.jdesktop.application.FrameView;
  * - The metric used to calculate the distance between documents.
  * - Etc...
  * 
- * @author      Salvo Danilo Giuffrida (giuffsalvo@hotmail.it, salvodanilogiuffrida@gmail.com)
+ * @author      Salvo Danilo Giuffrida (salvod.giuffrida@gmail.com)
  */
 public class PreferencesDialog extends javax.swing.JDialog {
 

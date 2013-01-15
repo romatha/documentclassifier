@@ -62,7 +62,7 @@ import org.jdesktop.application.Application;
 /**
  * This class represents the main frame of the application.
  * 
- * @author      Salvo Danilo Giuffrida (giuffsalvo@hotmail.it, salvodanilogiuffrida@gmail.com)
+ * @author      Salvo Danilo Giuffrida (salvod.giuffrida@gmail.com)
  */
 public class DocumentClassifierView extends FrameView implements PreferenceChangeListener {
 
